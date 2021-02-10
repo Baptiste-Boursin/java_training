@@ -1,7 +1,7 @@
-package epsi.test.jpa;
+package fr.epsi.test.jpa;
 
-import epsi.test.jpa.domain.Client;
-import epsi.test.jpa.domain.Emprunt;
+import fr.epsi.test.jpa.domain.Client;
+import fr.epsi.test.jpa.domain.Emprunt;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

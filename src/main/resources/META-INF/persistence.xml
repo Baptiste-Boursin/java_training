@@ -16,4 +16,33 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
                       value="org.mariadb.jdbc.Driver" />
         </properties>
     </persistence-unit>
+
+    <persistence-unit name="pu-banque" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>fr.epsi.banque.domain.Client</class>
+        <class>fr.epsi.banque.domain.Banque</class>
+        <class>fr.epsi.banque.domain.Adresse</class>
+        <class>fr.epsi.banque.domain.Compte</class>
+        <class>fr.epsi.banque.domain.Operation</class>
+        <class>fr.epsi.banque.domain.Virement</class>
+        <class>fr.epsi.banque.domain.LivretA</class>
+        <class>fr.epsi.banque.domain.AssuranceVie</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mariadb://localhost:3306/banque" />
+            <property name="javax.persistence.jdbc.user" value="baptistebrs" />
+            <property name="javax.persistence.jdbc.password"
+                      value="test" />
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.mariadb.jdbc.Driver" />
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+
+            <!-- Affichage des requêtes SQL -->
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.archive.autodetection" value=""/>
+        </properties>
+    </persistence-unit>
 </persistence>

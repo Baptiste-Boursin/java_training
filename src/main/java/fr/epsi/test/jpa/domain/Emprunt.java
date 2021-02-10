@@ -1,4 +1,6 @@
-package epsi.test.jpa.domain;
+package fr.epsi.test.jpa.domain;
+
+import fr.epsi.test.jpa.domain.Livre;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,16 +24,8 @@ public class Emprunt {
     @Column(name = "DELAI")
     private int delai;
 
-
-    @Column(name = "ID_CLIENT")
-    private int id_client;
-
     @ManyToMany(mappedBy = "emprunts")
     private Set<Livre> livres;
-
-    public int getId_client() {
-        return id_client;
-    }
 
     public Set<Livre> getLivres() {
         return livres;
@@ -44,8 +38,7 @@ public class Emprunt {
                 ", date_debut=" + date_debut +
                 ", date_fin=" + date_fin +
                 ", delai=" + delai +
-                ", id_client=" + id_client +
-                ", livres=" + livres.toString() +
+                ", livres=" + livres +
                 '}';
     }
 }

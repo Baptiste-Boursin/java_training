@@ -1,4 +1,4 @@
-package epsi.test.jpa.domain;
+package fr.epsi.test.jpa.domain;
 
 import javax.persistence.*;
 import java.util.Set;

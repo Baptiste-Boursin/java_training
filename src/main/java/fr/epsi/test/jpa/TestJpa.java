@@ -1,6 +1,6 @@
-package epsi.test.jpa;
+package fr.epsi.test.jpa;
 
-import epsi.test.jpa.domain.Livre;
+import fr.epsi.test.jpa.domain.Livre;
 import org.hibernate.Hibernate;
 
 import javax.persistence.EntityManager;
